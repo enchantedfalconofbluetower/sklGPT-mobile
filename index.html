@@ -22,7 +22,8 @@
             display: grid;
             grid-template-columns: 128px 1fr;
             height: 100vh;
-            overflow: hidden;
+            /* CRITICAL FIX: Ensure no content overflows the defined grid area */
+            overflow: hidden; 
         }
 
         /* Ensure the main chat iframe fills its grid cell */
@@ -130,7 +131,7 @@
         <!-- Left Sidebar: Dark (bg-gray-900) and fixed width -->
         <aside class="bg-gray-900 shadow-2xl p-4 flex flex-col space-y-4">
             
-            <!-- Logo/Title Section (UPDATED) -->
+            <!-- Logo/Title Section -->
             <div class="p-2 mb-4 flex flex-col items-center"> 
                 <div class="flex items-center space-x-1"> <!-- Container for image and title -->
                     <img 
